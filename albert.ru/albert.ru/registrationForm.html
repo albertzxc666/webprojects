@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+        <script>
+            function validateRegForm(){
+                let valid=true
+                if(document.regForm.email.value==""){
+                    alert("Вы забыли указать свой Email!")
+                    valid = false
+                }
+                return valid
+            }
+        </script>
+    <div id="page">
+        <div id="header">
+            <h1> Сайфутдинов Альберт Рамилевич (веб-разработчик) </h1>   
+        </div>
+            <div id="main">
+                <div id="menu">
+                <h2>
+                    <p> <a href="index.html">Главная</a></p>
+                    <p> <a href="jsexamples.html">Примеры JS</a></p>
+                    <p> <a href="colorcalcform.html">Форма цвета</a></p>
+                    <p> <a href="theme3.html">Тема3</a></p>
+                    <p> <a href="registrationForm.html">Форма регистрации</a></p>
+                </h2>
+            </div>
+    
+            <div id="content">
+                
+                <h3> Форма для регистрации на сайте </h3>
+                <form action="registerUserInDB.php" name="regForm" method="post" onsubmit="return validateRegForm()"> 
+                    <label for="email">Email:</label>
+                    <input type ="email" name="email" id="email">
+                    <br/><label for="firstName">Имя:</label>
+                    <input type ="text" name="firstName" id="firstName">
+                    <br/><label for="lastName">Фамилия:</label>
+                    <input type ="text" name="lastName" id="lastName">
+                    <br/><label for="patronymic">Отчество:</label>
+                    <input type ="text" name="patronymic" id="patronymic">
+                    <br/><label for="city">Город:</label>
+                    <input type ="text" name="city" id="city">
+                    <br/><label for="age">Возраст:</label>
+                    <input type="number" name="age" id="age" maxlength="2">
+                    <br/><input type="radio" name="gender" value="Male">М
+                    <br/><input type="radio" name="gender" value="Female">Ж
+                    <br/><label for="pass">Пароль:</label>
+                    <input type ="password" name="pass" id="pass">
+                    <br/><button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+        <div id="projects">
+            <h2>
+                Мои проекты
+            </h2>
+        </div>
+        <div class="block"> 
+                Проект1
+        </div>
+
+        <div class="block">
+                Проект2
+        </div>
+
+        <div class="block">
+                Проект3
+        </div>
+        
+</body>
+
+</html>

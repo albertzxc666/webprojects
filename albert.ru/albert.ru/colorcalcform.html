@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/colorcalc.js"></script> </script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <h1> Сайфутдинов Альберт Рамилевич (веб-разработчик) </h1>   
+        </div>
+            <div id="main">
+                <div id="menu">
+                <h2>
+                    <p> <a href="index.html">Главная</a></p>
+                    <p> <a href="jsexamples.html">Примеры JS</a></p>
+                    <p> <a href="colorcalcform.html">Форма цвета</a></p>
+                    <p> <a href="theme3.html">Тема3</a></p>
+                </h2>
+            </div>
+    
+            <div id="content">
+                <h2> Форма калькулятор цветов</h2>
+                    <form name="color_calc" action="#" onsubmit="return calculateColor('n1', 'n2', 'op', 'result', 'color_result')">
+                        <label for="n1">Число 1:</label>
+                        <input type="number" name="n1" id="n1" oninput="convertToColor('n1','color_n1')">
+                        <span id="color_n1" style="background: white">цвет 1</span>
+                        <br/>
+                        <label for="op">Операция (+, -, *, /):</label>
+                        <input type="text" size="1" maxlength="1" name="op" id="op">
+                        <br/>
+                        <label for="n2">Число 2:</label>
+                        <input type="number" name="n2" id="n2" oninput="convertToColor('n2','color_n2')">
+                        <span id="color_n2" style="background: white">цвет 2</span>
+                        <br/>
+                        <button type="submit">Посчитать</button>
+                        
+                    </form>
+                    Результат:
+                    <span id="result"> значение</span>
+                    <span id="color_result" style="background: white">цвет результата</span>
+                    <br/>
+                    <button onclick="makeRandomColor()">Сгенерировать</button>
+
+
+            </div> 
+        </div>
+        <div id="projects">
+            <h2>
+                Мои проекты
+            </h2>
+        </div>
+        <div class="block"> 
+                Проект1
+        </div>
+
+        <div class="block">
+                Проект2
+        </div>
+
+        <div class="block">
+                Проект3
+        </div>
+        
+</body>
+
+</html>
